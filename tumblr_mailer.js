@@ -43,7 +43,8 @@ client.posts("ryancoding",function(err, blog){
   	blog.posts.forEach(function(post){
   	if (Date.now()-Date.parse(post.date)<604800000){
   		latestPosts.push(post);
-  	};
+  	}
+  });
 
 	csvData = csvParse(csvFile);
 	 
@@ -61,7 +62,6 @@ client.posts("ryancoding",function(err, blog){
 		
 		});
 	});
-});
 
 function sendEmail(to_name, to_email, from_name, from_email, subject, message_html){
 	var message = {
