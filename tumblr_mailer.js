@@ -4,14 +4,14 @@ var ejs = require('ejs');
 // Authenticate via OAuth
 var tumblr = require('tumblr.js');
 var client = tumblr.createClient({
-  consumer_key: 'mBbcHqBG4PmruNc1GI8qlLKt3Y2RywyMBNpposSKKBVlGzI6j2',
-  consumer_secret: 'mlYaUdEDaBMQTVxRndTjJxLaqbgmGRCy5UzET1jAez8rClS4Dk',
-  token: '8QgmeS7DAPPET0XUTjcYnMT62fElECZsBYqA1VS0WN6nP4alfU',
-  token_secret: 'TmRWbn85Q4wUenyBd9thTLW8PgwBYfONEH6EiB3Px2ah9qfwtc'
+  consumer_key: '',
+  consumer_secret: '',
+  token: '',
+  token_secret: ''
 });
 //mandrel account data
 var mandrill = require('mandrill-api/mandrill');
-var mandrill_client = new mandrill.Mandrill('7kIvZ_B9dO37LfYADFkbLQ');
+var mandrill_client = new mandrill.Mandrill('');
 
 var csvFile = fs.readFileSync("friend_list.csv","utf8");
 var emailTemplate = fs.readFileSync('email_template.ejs', 'utf8');
